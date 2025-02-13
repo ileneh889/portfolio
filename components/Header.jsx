@@ -1,7 +1,9 @@
 import Link from "next/link"
-import { Button } from "./ui/Button"
+import { Button } from "./ui/button"
 // components
 import Nav from "./Nav"
+import MobileNav from "./MobileNav"
+
 
 export default function Header() {
   return (
@@ -18,13 +20,13 @@ export default function Header() {
         <div className="hidden xl:flex items-center gap-8">
           <Nav />
           <Link href="/contact">
-            <button>Hire me</button>
+            <Button>Hire me</Button>
           </Link>
         </div>
 
         {/* mobile nav */}
         <div className="xl:hidden">
-          mobile nav
+          <MobileNav />
         </div>
       </div>
     </header>

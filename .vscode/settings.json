@@ -1,0 +1,8 @@
+
+// 避免tailwind在.css/@layer base裡出現冒號後面有空白格
+{ 
+  "css.lint.unknownAtRules": "ignore", 
+  "[css]": { 
+    "editor.defaultFormatter": "bradlc.vscode-tailwindcss" 
+    } 
+}

@@ -23,8 +23,8 @@ export default function PageTransition({ children }) {
           animate={{ opacity: 0 }}
           // 以上從2(1)→2(2)的過場效果(若未設定則會視framer-motion預設設定)
           transition={{
-            delay: 0,
-            duration: 1.3,
+            delay: 1,
+            duration: 0.2,
             ease: "easeInOut",
           }}
         />
