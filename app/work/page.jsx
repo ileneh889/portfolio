@@ -165,7 +165,6 @@ export default function Work() {
                           <div className="relative w-full h-full">
                             <Image
                               src={project.image}
-                              // fill and size props 一定要一起出現
                               fill
                               alt="project"
                               className="object-cover"
