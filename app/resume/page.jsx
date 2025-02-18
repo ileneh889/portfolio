@@ -11,7 +11,6 @@ const TooltipContent = dynamic(() => import('@/components/ui/tooltip').then(mod 
 
 // SSR
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ScrollArea } from "@/components/ui/scroll-area";
 
 // data
 import { ABOUT, EXPERIENCE, EDUCATION, SKILLS } from '@/lib/utils'

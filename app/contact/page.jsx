@@ -1,34 +1,21 @@
 "use client";
 
+// SSR
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
+// CSR
+import dynamic from 'next/dynamic'
+const MotionDiv = dynamic(() => import('framer-motion').then(mod => mod.motion.div), { ssr: false })
 
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import { motion } from "framer-motion";
+// data
+import { INFO } from "@/lib/utils";
 
-const info = [
-  {
-    icon: <FaPhoneAlt />,
-    title: "Phone",
-    description: "(+886) 0926-555-726",
-  },
-  {
-    icon: <FaEnvelope />,
-    title: "Email",
-    description: "ileneh8899@gmail.com",
-  },
-  {
-    icon: <FaMapMarkerAlt />,
-    title: "line",
-    description: "ileneh889",
-  },
-]
 
 export default function Contact() {
   return (
-    <motion.section
+    <MotionDiv
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{
@@ -72,14 +59,15 @@ export default function Contact() {
           {/* info */}
           <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
             <ul className="flex flex-col gap-10">
-              {info.map((item, index) => {
+              {INFO.map((item, index) => {
+                const IconComponent = item.icon;
                 return (
                   <li
                     key={index}
                     className="flex items-center gap-6"
                   >
                     <div className="w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] bg-[#27272c] text-accent rounded-md flex items-center justify-center">
-                      <div className="text-[28px]">{item.icon}</div>
+                      <div className="text-[28px]"><IconComponent /></div>
                     </div>
                     <div className="flex-1">
                       <p className="text-white/60">{item.title}</p>
@@ -92,6 +80,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </motion.section>
+    </MotionDiv>
   )
 }
