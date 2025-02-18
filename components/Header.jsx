@@ -19,7 +19,7 @@ export default function Header() {
         {/* desktop nav & hure me btn*/}
         <div className="hidden xl:flex items-center gap-8">
           <Nav />
-          <Link href="mailto:ileneh8899@gmail.com?subject=Job Opportunity&body=Hi, I'm interested in hiring you...">
+          <Link href="mailto:ileneh8899@gmail.com?subject=We would like to work with you!&body=I'd love to have a conversation with you about a potential opportunity to join our team!">
             <Button>Hire me</Button>
           </Link>
         </div>
