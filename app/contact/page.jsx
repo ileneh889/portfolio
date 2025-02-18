@@ -81,7 +81,7 @@ export default function Contact() {
               onSubmit={onSubmit}
             >
               <h3 className="text-4xl text-accent">Let's work together</h3>
-              <p className="text-white/60">Looking for a Front-en developer? Drop a message and let me know you're interested!</p>
+              <p className="text-white/60">Looking for a Front-end developer? Drop a message and let me know you're interested!</p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input type="firstname" placeholder="firstname *" name="firstname" value={formData.firstname} onChange={handleChange} required />

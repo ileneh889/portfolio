@@ -51,7 +51,7 @@ export default function Photo({ basepath }) {
             cx="253"
             cy="253"
             r="250"
-            stroke="#80ff92"
+            stroke="#F5DF4D"   //color
             strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"

@@ -79,7 +79,7 @@ export default function Work() {
               <div className="flex items-center gap-4">
                 {/* live project btn */}
                 {project.live.length !== 0 &&
-                  <Link href={project.live}>
+                  <a href={project.live} target="_blank">
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
                         {/* trigger */}
@@ -92,11 +92,11 @@ export default function Work() {
                         </TooltipContent>
                       </Tooltip>
                     </TooltipProvider>
-                  </Link>
+                  </a>
                 }
 
                 {/* github project btn */}
-                <Link href={project.github}>
+                <a href={project.github} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       {/* trigger */}
@@ -109,7 +109,7 @@ export default function Work() {
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
-                </Link>
+                </a>
               </div>
             </div>
           </div>

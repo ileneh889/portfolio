@@ -28,8 +28,8 @@ const tailwindConfig = {
 			colors: {
 				primary: '#1c1c22',
 				accent: {
-					DEFAULT: '#00ff99',   //green-ish
-					hover: '#00e187',     //green-ish
+					DEFAULT: '#F5DF4D',   //green-ish#00ff99
+					hover: '#bab754',     //green-ish#00e187
 				},
 			},
 			keyframes: {
