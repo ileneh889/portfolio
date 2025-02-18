@@ -22,7 +22,7 @@ import { PROJECTS } from '@/lib/utils'
 
 export default function Work() {
   const [project, setProject] = useState(PROJECTS[0])
-  // const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : ''
+
   const basePath = process.env.GITHUB_ACTIONS ? '/portfolio' : '';
 
 
@@ -136,7 +136,7 @@ export default function Work() {
                         {/* image */}
                         <div className="relative w-full h-full">
                           <Image
-                            src={project.image}
+                            src={`${basePath}${project.image}`}
                             fill
                             alt="project"
                             className="object-cover"
