@@ -2,8 +2,8 @@ import Link from "next/link"
 import { FaGithub, FaLinkedinIn, FaYoutube, FaTwitter } from "react-icons/fa";
 
 const socials = [
-  { icon: <FaGithub />, path: "" },
-  { icon: <FaLinkedinIn />, path: "" },
+  { icon: <FaGithub />, path: "https://github.com/ileneh889" },
+  { icon: <FaLinkedinIn />, path: "https://www.linkedin.com/in/yu-wen-huang-291080291/" },
   // { icon: <FaYoutube />, path: "" },
   // { icon: <FaTwitter />, path: "" }
 ];
@@ -14,13 +14,14 @@ export default function Social({ containerStyles, iconStyles }) {
       {
         socials.map((social, index) => {
           return (
-            <Link
+            <a
               href={social.path}
               key={index}
               className={iconStyles}
+              target="_blank"
             >
               {social.icon}
-            </Link>
+            </a>
           );
         })
       }

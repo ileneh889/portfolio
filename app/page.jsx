@@ -7,6 +7,7 @@ import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 
 export default function Home() {
+  console.log('NODE_ENV:', process.env.NODE_ENV)
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
@@ -24,14 +25,19 @@ export default function Home() {
             </p>
             {/* button and socials*/}
             <div className="flex flex-col xl:flex-row items-center gap-8" >
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2"
+              <a
+                href="/CV_en.pdf"
+                download="CV_en.pdf"
               >
-                <span>download CV</span>
-                <FiDownload className="text-xl" />
-              </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="uppercase flex items-center gap-2"
+                >
+                  <span>download CV</span>
+                  <FiDownload className="text-xl" />
+                </Button>
+              </a>
               <div className="mb-8 xl:mb-0" >
                 <Social
                   containerStyles="flex gap-6"

@@ -64,22 +64,22 @@ const about = {
 const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+  description: "With 6 years of diplomatic experience in the Middle East and 7 years of hosting events and receiving foreign dignitaries, I have developed strong cross-cultural communication skills.",
   items: [
     {
-      company: "Tech Solutions Inc.",
-      position: "Full Stack Developer",
-      duration: "2022 - Present"
+      company: "Taipei Economic And Cultural Office (TECO)",
+      position: "Overseas Assignee",
+      duration: "AUG 2018 - FEB 2024"
     },
     {
-      company: "Tech Solutions Inc.",
-      position: "Full Stack Developer",
-      duration: "2022 - Present"
+      company: "Presidential Office ",
+      position: "Project Coordinator",
+      duration: "FEB 2014 - AUG 2018"
     },
     {
-      company: "Tech Solutions Inc.",
-      position: "Full Stack Developer",
-      duration: "2022 - Present"
+      company: "Taipei Veterans General Hospital ",
+      position: "Assistant Project Coordinator",
+      duration: "OCT 2011 - FEB 2014"
     },
   ]
 };
@@ -91,14 +91,14 @@ const education = {
   description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
   items: [
     {
-      institution: "Ispan front-end bootcamp",
-      degree: "Full Stack Developer",
-      duration: "2022 - Present"
+      institution: "ISpan International Front-End developer Bootcamp",
+      degree: "Front-End developer",
+      duration: "MAR 2024 - AUG 2024"
     },
     {
-      institution: "Tech Solutions Inc.",
-      degree: "Full Stack Developer",
-      duration: "2022 - Present"
+      institution: "National Taipei University of Education",
+      degree: "Department of Arts and Design",
+      duration: "SEP 2006 - JUL 2010"
     },
   ]
 };
@@ -174,12 +174,12 @@ export default function Resume() {
           </TabsList>
 
           {/* content */}
-          <div className="min-h-[70vh] w-full">
+          <div className="min-h-[70vh] w-full" >
             {/* experience */}
-            <TabsContent value="experience" className="w-full">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+            <TabsContent value="experience" className="w-full" >
+              <div className="flex flex-col gap-[30px] text-center xl:text-left" >
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
-                {/* <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{experience.description}</p> */}
+                <p className="max-w-full text-white/60 mx-auto xl:mx-0" >{experience.description}</p>
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-col-1 gap-[30px]">
                     {
@@ -211,12 +211,12 @@ export default function Resume() {
             </TabsContent>
 
             {/* education */}
-            <TabsContent value="education" className="w-full">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{education.title}</h3>
+            <TabsContent value="education" className="w-full" >
+              <div className="flex flex-col gap-[30px] text-center xl:text-left" >
+                <h3 className="text-4xl font-bold" >{education.title}</h3>
                 {/* <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{experience.description}</p> */}
-                <ScrollArea className="h-[400px]">
-                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
+                <ScrollArea className="h-[400px]" >
+                  <ul className="grid grid-cols-1 gap-[30px]">
                     {
                       education.items.map((item, index) => {
                         return (

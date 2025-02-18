@@ -21,35 +21,35 @@ const projects = [
   {
     num: "01",
     category: "fullstack",
-    title: "project 1",
+    title: "Dracarys Online Game Official Website",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi distinctio id adipisci offici!",
+      "Using React with Next.js and Node.js with express to set up the front-end and back-end of an official online game website ",
     stack: [{ name: "React" }, { name: "Next.js" }, { name: "Node.js" }, { name: "MySQL" }],
     image: '/assets/work/thumb1.png',
     live: '',
-    github: '',
+    github: 'https://github.com/ileneh889/e_game_website',
   },
   {
     num: "02",
     category: "frontend",
-    title: "project 1",
+    title: "https://github.com/ileneh889/pastries_website",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi distinctio id adipisci offici!",
+      "Utilized Bootstrap along with integrated HTML and CSS to create a seamless and responsive user experience across various devices",
     stack: [{ name: "Bootstrap" }, { name: "Html 5" }, { name: "Css 3" }],
     image: '/assets/work/thumb2.png',
-    live: '',
-    github: '',
+    live: 'https://github.com/ileneh889/pastries_website',
+    github: 'https://github.com/ileneh889/pastries_website',
   },
   {
     num: "03",
     category: "frontend",
     title: "project 1",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi distinctio id adipisci offici!",
+      "A word assembly game that build with React and Vite.",
     stack: [{ name: "React" }],
     image: '/assets/work/thumb3.png',
-    live: '',
-    github: '',
+    live: 'https://hangman-assembly.netlify.app/',
+    github: 'https://github.com/ileneh889/hangman_game?tab=readme-ov-file',
   },
 ];
 
@@ -110,20 +110,23 @@ export default function Work() {
               {/* btn */}
               <div className="flex items-center gap-4">
                 {/* live project btn */}
-                <Link href={project.live}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      {/* trigger */}
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
-                      {/* content */}
-                      <TooltipContent>
-                        <p>Live Demo</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
+                {project.live.length !== 0 &&
+                  <Link href={project.live}>
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        {/* trigger */}
+                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                          <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
+                        </TooltipTrigger>
+                        {/* content */}
+                        <TooltipContent>
+                          <p>Live Demo</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                }
+
                 {/* github project btn */}
                 <Link href={project.github}>
                   <TooltipProvider delayDuration={100}>
