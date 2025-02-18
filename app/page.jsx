@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi"
 
+
 // components
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 
 export default function Home() {
-  console.log('NODE_ENV:', process.env.NODE_ENV)
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">

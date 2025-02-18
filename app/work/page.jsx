@@ -25,7 +25,7 @@ const projects = [
     description:
       "Using React with Next.js and Node.js with express to set up the front-end and back-end of an official online game website ",
     stack: [{ name: "React" }, { name: "Next.js" }, { name: "Node.js" }, { name: "MySQL" }],
-    image: '/assets/work/thumb1.png',
+    image: '/assets/work/game_scr.png',
     live: '',
     github: 'https://github.com/ileneh889/e_game_website',
   },
@@ -36,7 +36,7 @@ const projects = [
     description:
       "Utilized Bootstrap along with integrated HTML and CSS to create a seamless and responsive user experience across various devices",
     stack: [{ name: "Bootstrap" }, { name: "Html 5" }, { name: "Css 3" }],
-    image: '/assets/work/thumb2.png',
+    image: '/assets/work/pastry_scr.png',
     live: 'https://github.com/ileneh889/pastries_website',
     github: 'https://github.com/ileneh889/pastries_website',
   },
@@ -47,7 +47,7 @@ const projects = [
     description:
       "A word assembly game that build with React and Vite.",
     stack: [{ name: "React" }],
-    image: '/assets/work/thumb3.png',
+    image: '/assets/work/hangman.png',
     live: 'https://hangman-assembly.netlify.app/',
     github: 'https://github.com/ileneh889/hangman_game?tab=readme-ov-file',
   },
@@ -159,22 +159,20 @@ export default function Work() {
                       key={index}
                       className="w-full"
                     >
-                      <SwiperSlide key={index} className="w-full" >
-                        <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-                          {/* overlay */}
-                          <div className="absolute top-0 buttom-0 w-full h-full bg-black/10 z-10">
-                          </div>
-                          {/* image */}
-                          <div className="relative w-full h-full">
-                            <Image
-                              src={project.image}
-                              fill
-                              alt="project"
-                              className="object-cover"
-                            />
-                          </div>
+                      <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                        {/* overlay */}
+                        <div className="absolute top-0 buttom-0 w-full h-full bg-black/10 z-10">
                         </div>
-                      </SwiperSlide>
+                        {/* image */}
+                        <div className="relative w-full h-full">
+                          <Image
+                            src={project.image}
+                            fill
+                            alt="project"
+                            className="object-cover"
+                          />
+                        </div>
+                      </div>
                     </SwiperSlide>
                   )
                 })
@@ -188,7 +186,6 @@ export default function Work() {
           </div>
         </div>
       </div>
-
     </motion.section>
   )
 }
