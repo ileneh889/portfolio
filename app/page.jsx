@@ -7,8 +7,12 @@ import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 
+
+
 export default function Home() {
-  const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : ''
+  // const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : ''
+  const basePath = process.env.GITHUB_ACTIONS ? '/portfolio' : '';
+
 
   return (
     <section className="h-full">

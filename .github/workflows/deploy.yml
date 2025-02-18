@@ -3,17 +3,13 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: ["main"]
-
-  # 允許從 Actions 頁面手動觸發部署
   workflow_dispatch:
 
-# 設定 GITHUB_TOKEN 的權限
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# 只允許同時進行一個部署
 concurrency:
   group: "pages"
   cancel-in-progress: true
@@ -38,6 +34,8 @@ jobs:
         run: npm ci
 
       - name: Build
+        env:
+          GITHUB_ACTIONS: true
         run: npm run build
 
       - name: Setup Pages

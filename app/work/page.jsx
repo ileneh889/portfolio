@@ -22,7 +22,9 @@ import { PROJECTS } from '@/lib/utils'
 
 export default function Work() {
   const [project, setProject] = useState(PROJECTS[0])
-  const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : ''
+  // const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : ''
+  const basePath = process.env.GITHUB_ACTIONS ? '/portfolio' : '';
+
 
   function handleSlideChange(swiper) {
     // 獲得curreny slide index:wiper DOCs裡提供的build-in property
