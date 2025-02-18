@@ -12,55 +12,23 @@ import {
 } from "@/components/ui/tooltip";
 import Link from "next/link";
 import Image from "next/image";
-// components
+
 // components
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
+// data
+import { PROJECTS } from '@/lib/utils'
 
-const projects = [
-  {
-    num: "01",
-    category: "fullstack",
-    title: "Dracarys Online Game Official Website",
-    description:
-      "Using React with Next.js and Node.js with express to set up the front-end and back-end of an official online game website ",
-    stack: [{ name: "React" }, { name: "Next.js" }, { name: "Node.js" }, { name: "MySQL" }],
-    image: '/assets/work/game_scr.png',
-    live: '',
-    github: 'https://github.com/ileneh889/e_game_website',
-  },
-  {
-    num: "02",
-    category: "frontend",
-    title: "https://github.com/ileneh889/pastries_website",
-    description:
-      "Utilized Bootstrap along with integrated HTML and CSS to create a seamless and responsive user experience across various devices",
-    stack: [{ name: "Bootstrap" }, { name: "Html 5" }, { name: "Css 3" }],
-    image: '/assets/work/pastry_scr.png',
-    live: 'https://github.com/ileneh889/pastries_website',
-    github: 'https://github.com/ileneh889/pastries_website',
-  },
-  {
-    num: "03",
-    category: "frontend",
-    title: "project 1",
-    description:
-      "A word assembly game that build with React and Vite.",
-    stack: [{ name: "React" }],
-    image: '/assets/work/hangman.png',
-    live: 'https://hangman-assembly.netlify.app/',
-    github: 'https://github.com/ileneh889/hangman_game?tab=readme-ov-file',
-  },
-];
 
 export default function Work() {
-  const [project, setProject] = useState(projects[0])
+  const [project, setProject] = useState(PROJECTS[0])
+  const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : ''
 
   function handleSlideChange(swiper) {
     // 獲得curreny slide index:wiper DOCs裡提供的build-in property
     const currentIndex = swiper.activeIndex
     // update project state
-    setProject(projects[currentIndex])
+    setProject(PROJECTS[currentIndex])
   }
 
 
@@ -153,7 +121,7 @@ export default function Work() {
               onSlideChange={handleSlideChange}
             >
               {
-                projects.map((project, index) => {
+                PROJECTS.map((project, index) => {
                   return (
                     <SwiperSlide
                       key={index}
@@ -166,7 +134,7 @@ export default function Work() {
                         {/* image */}
                         <div className="relative w-full h-full">
                           <Image
-                            src={project.image}
+                            src={`${basePath}${project.image}`}
                             fill
                             alt="project"
                             className="object-cover"

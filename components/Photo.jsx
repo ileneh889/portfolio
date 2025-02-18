@@ -4,7 +4,9 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 
-export default function Photo() {
+export default function Photo({ basepath }) {
+
+
   return (
     <div className="w-full h-full relative overflow-hidden rounded-full">
       <motion.div
@@ -28,7 +30,7 @@ export default function Photo() {
           className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
         >
           <Image
-            src="/assets/photo.png"
+            src={`${basepath}/assets/photo.png`}
             priority
             quality={85}
             alt="hero"
