@@ -136,7 +136,7 @@ export default function Work() {
                         {/* image */}
                         <div className="relative w-full h-full">
                           <Image
-                            src={`${basePath}${project.image}`}
+                            src={project.image}
                             fill
                             alt="project"
                             className="object-cover"
