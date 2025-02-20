@@ -11,7 +11,7 @@ import Stats from "@/components/Stats";
 
 export default function Home() {
   // const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : ''
-  const basePath = process.env.GITHUB_ACTIONS ? '/portfolio' : '';
+  // const basePath = process.env.GITHUB_ACTIONS ? '/portfolio' : '';
 
 
   return (
@@ -32,7 +32,7 @@ export default function Home() {
             {/* button and socials*/}
             <div className="flex flex-col xl:flex-row items-center gap-8" >
               <a
-                href={`${basePath}/CV_en.pdf`}
+                href="/CV_en.pdf"
                 download="CV_en.pdf"
               >
                 <Button
@@ -54,7 +54,7 @@ export default function Home() {
           </div>
           {/* photo */}
           <div className="order-1 xl:order-none mb-8 xl:mb-0">
-            <Photo basepath={basePath} />
+            <Photo />
           </div>
         </div>
       </div>

@@ -1,15 +1,23 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
-  // 只在 GitHub Actions 執行時添加 /portfolio 前綴
-  basePath: process.env.GITHUB_ACTIONS ? '/portfolio' : '',
-  assetPrefix: process.env.GITHUB_ACTIONS ? '/portfolio/' : '',
-  images: {
-    unoptimized: true,
-  },
-};
+const nextConfig = {};
 
 export default nextConfig;
+
+
+
+// for github deploy
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   output: 'export',
+//   // 只在 GitHub Actions 執行時添加 /portfolio 前綴
+//   basePath: process.env.GITHUB_ACTIONS ? '/portfolio' : '',
+//   assetPrefix: process.env.GITHUB_ACTIONS ? '/portfolio/' : '',
+//   images: {
+//     unoptimized: true,
+//   },
+// };
+
+// export default nextConfig;
 
 
 
